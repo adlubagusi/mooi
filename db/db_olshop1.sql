@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2022 at 04:46 PM
+-- Generation Time: Apr 14, 2022 at 05:26 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_olshop`
+-- Database: `db_olshop1`
 --
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `cookie`) VALUES
-(1, 'kamisama', '$2y$10$9trmm35tTipIBZsfpSDU9OAhs/.1myz.HpQe83V5uSJMvNvblcez2', 'aQ20VVR9RDzf6ClUrMncPstv8LrGNYMpkoW87SWw7CXb5qTpymKdTn53zHH1Ee4h');
+(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'aQ20VVR9RDzf6ClUrMncPstv8LrGNYMpkoW87SWw7CXb5qTpymKdTn53zHH1Ee4h');
 
 -- --------------------------------------------------------
 
@@ -152,7 +152,7 @@ CREATE TABLE `general` (
 --
 
 INSERT INTO `general` (`id`, `app_name`, `slogan`, `navbar_color`, `host_mail`, `port_mail`, `crypto_mail`, `account_mail`, `pass_mail`, `whatsapp`, `whatsappv2`, `email_contact`) VALUES
-(1, 'BT Store', 'Easy and Reliable Online Shop', '#2d2d2d', 'ssl://gmail.com', '465', '', 'banatechindonesia@gmail.com', 'moemoe123', '081235375548', '6281234567890', 'cs@banatechindo.com');
+(1, 'BT Store', 'Easy and Reliable Online Shop', '#2d2d2d', 'ssl://gmail.com', '465', '', 'banatechindonesia@gmail.com', '12345', '081235375548', '6281234567890', 'cs@banatechindo.com');
 
 -- --------------------------------------------------------
 
@@ -382,7 +382,7 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `promo`, `promo_time`, `short_desc`, `address`, `logo`, `favicon`) VALUES
-(1, 0, '2020-10-24T01:00', 'BT Store is an easy and reliable online shop site. We have a physical shop that you can visit. Here sells a variety of computers, gadgets, and men\'s and women\'s clothing', 'Malang, Indonesia', '1602916934871.png', '1602916958661.jpg');
+(1, 0, '2020-10-24T01:00', 'BT Store is an easy and reliable online shop site. We have a physical shop that you can visit. Here sells a variety of computers, gadgets, and men\'s and women\'s clothing', 'Malang, Indonesia', '1602916934871.jpg', '1602916934871.jpg');
 
 -- --------------------------------------------------------
 
@@ -604,7 +604,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `email_send`
