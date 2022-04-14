@@ -1,4 +1,5 @@
 <?php
+require_once 'include/cfg.php';
 $cError = "" ; 
 
 if(isset($_POST['submitlogin'])){
@@ -59,7 +60,7 @@ if(isset($_POST['submitlogin'])){
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Login Admin!</h1>
+                    <h1 class="h4 text-gray-900 mb-4">Login!</h1>
                   </div>
                   <?php
                     if($cError <> ""){

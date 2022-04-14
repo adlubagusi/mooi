@@ -8,7 +8,7 @@ if(isset($_GET['page'])){
         $page = "module/admin/categories.php";
     }else if($url == "products"){
         $page = "module/admin/products.php";
-    }else if($url == "product_add"){
-        $page = "module/admin/product_add.php";
+    }else if($url == "settings"){
+        $page = "module/admin/settings.php";
     }
 }

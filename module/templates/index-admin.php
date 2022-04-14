@@ -1,6 +1,8 @@
 <?php   
-    $dbData     = mysqli_query($db,"select * from settings");
-    $vaSettings = mysqli_fetch_array($dbData);
+    $dbSettings    = mysqli_query($db,"select * from settings");
+    $vaSettings    = mysqli_fetch_array($dbSettings);
+    $dbGeneral     = mysqli_query($db,"select * from general");
+    $vaGeneral     = mysqli_fetch_array($dbGeneral);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,6 +38,7 @@
 
     <link rel="stylesheet" href="assets/select2-4.0.6-rc.1/dist/css/select2.min.css">
     <script src="https://cdn.ckeditor.com/ckeditor5/18.0.0/classic/ckeditor.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.11.5/datatables.min.css"/>
 
     <link
       rel="shortcut icon"
@@ -149,8 +152,8 @@
 
         <li class="nav-item">
           <a class="nav-link" href="?page=pages">
-            <i class="fas fa-fw fa-file"></i>
-            <span>Halaman</span></a
+            <i class="fas fa-fw fa-users"></i>
+            <span>Users</span></a
           >
         </li>
 
@@ -295,6 +298,10 @@
 <script src="assets/vendor/chart.js/Chart.min.js"></script>
 <script src="assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>
 <script src="assets/plentz-jquery-maskmoney-cdbeeac/dist/jquery.maskMoney.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.11.5/datatables.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/scroller/2.0.5/js/dataTables.scroller.min.js"></script> -->
 
 <script>
 
@@ -307,6 +314,12 @@ ClassicEditor
         console.error( error );
 } );
 
+$('#dataTable').DataTable( {
+            deferRender:    true,
+            // scrollY:        800,
+            scrollCollapse: true,
+            scroller:       true
+        } );
 
 $("#sendMailTo").select2({
     placeholder: 'Choose a Destination',
