@@ -53,8 +53,8 @@
 	}
 
 	if(isset($_GET['opt'])){
-		$cID  = $_GET['id'];
 		if($_GET['opt'] == "delete"){
+			$cID  = $_GET['id'];
 			$dbDt = mysqli_query($db,"select * from products where id='$cID'");
 			if($dbRw = mysqli_fetch_array($dbDt)){
 				mysqli_query($db,"delete from products where id='$cID'");
@@ -64,6 +64,7 @@
 				echo "<script>alert('Data Tidak Ditemukan');</script>";
 			}
 		}else if($_GET['opt'] == "delete_other_img"){
+			$cID  = $_GET['id'];
 			$cIDProduk = $_GET['idproduk'];
 			$dbDt = mysqli_query($db,"select * from img_product where id='$cID'");
 			if($dbRw = mysqli_fetch_array($dbDt)){
